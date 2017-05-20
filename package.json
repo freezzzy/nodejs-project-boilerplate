@@ -7,8 +7,9 @@
   "author": "freezzzy <roman.yakovetz@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "rimraf ./dist && babel -d ./dist ./src && node ./dist/main.js",
+    "start": "rimraf ./dist && babel -d ./dist ./src && yarn start copy-public && node ./dist/main.js",
     "dev": "node dev.js",
+    "copy-public": "cp -r ./src/public ./dist/",
     "lint:js": "eslint ./src",
     "lint-staged": "lint-staged"
   },
